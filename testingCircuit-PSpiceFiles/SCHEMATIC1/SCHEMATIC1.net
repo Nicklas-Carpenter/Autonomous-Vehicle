@@ -1,0 +1,17 @@
+* source TESTINGCIRCUIT
+X_U1         N15097 CHARGE N14717 0 N14967 0 LM311
+X_M1         N14760 N14967 CHARGE IRFZ44N
+X_U2         N14717 N14776 N14760 LM317
+V_V1         N14717 0  DC 18
+R_R1         N14776 N14760  1k TC=0,0 
+R_R2         0 N14776  20k TC=0,0 
+R_R3         N14717 N15097  10k TC=0,0 
+R_R4         N15097 0  20k TC=0,0 
+R_R5         N14717 N14967  1k TC=0,0 
+R_R8         N14967 0  10k TC=0,0 
+C_C2         N14760 0 1n 
+C_C3         CHARGE 0 12 IC=0
+D_D1         N22894 0 MEH_LED 
+R_R11         N22894 N14717  1.8k TC=0,0 
+** Floating/unmodeled pin fixups **
+R__UC0001   0  0   {1/GMIN}

@@ -1,0 +1,289 @@
+
+**** 05/01/20 16:52:11 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-test1"  [ C:\USERS\TAYLORRC\DOCUMENTS\testingCircuit-PSpiceFiles\SCHEMATIC1\test1.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "test1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/Cadence/SPB_16.6/tools/pspice/library/irf.lib" 
+.LIB "C:/Cadence/SPB_16.6/tools/pspice/library/opamp.lib" 
+.LIB "C:/Cadence/SPB_16.6/tools/pspice/library/ebipolar.lib" 
+.LIB "C:/Cadence/RHIT_Libraries/RHIT_Libraries/Class.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 5 0 0.001 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source TESTINGCIRCUIT
+X_U1         N15097 CHARGE N14717 0 N14967 0 LM311
+X_M1         N14760 N14967 CHARGE IRFZ44N
+X_U2         N14717 N14776 N14760 LM317
+V_V1         N14717 0  DC 24
+R_R1         N14776 N14760  1k TC=0,0 
+R_R2         0 N14776  13k TC=0,0 
+R_R3         N14717 N15097  3.3k TC=0,0 
+R_R4         N15097 0  5k TC=0,0 
+R_R5         N14717 N14967  10k TC=0,0 
+C_C1         0 CHARGE  0.2  TC=0,0 
+C_C2         N14760 0 1n 
+** Floating/unmodeled pin fixups **
+R__UC0001   0  0   {1/GMIN}
+
+**** RESUMING test1.cir ****
+.END
+
+**** 05/01/20 16:52:11 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-test1"  [ C:\USERS\TAYLORRC\DOCUMENTS\testingCircuit-PSpiceFiles\SCHEMATIC1\test1.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.dx         X_M1.MD         X_M1.MD1        X_M1.MD2        
+          IS  800.000000E-18  964.634900E-15    0             100.000000E-12 
+           N                    1.01377        50                .408752     
+          BV                   55                                            
+         IBV                  250.000000E-06                                 
+          RS                    9.676890E-03                    3.000000E-06 
+          TT                  100.000000E-09                                 
+         CJO                    1.393530E-09    1.528750E-09                 
+          VJ                     .5              .5                          
+           M                     .42532          .584414                     
+          FC                                   10.000000E-09                 
+          EG                    1.08658                                      
+         XTI                    2.9994                                       
+
+
+               X_M1.MD3        X_U2.DMOD       
+          IS  100.000000E-12   30.000000E-15 
+           N     .408752        1.701        
+
+
+**** 05/01/20 16:52:11 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-test1"  [ C:\USERS\TAYLORRC\DOCUMENTS\testingCircuit-PSpiceFiles\SCHEMATIC1\test1.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.qin        X_U1.qmi        X_U1.qmo        X_U1.qoc        
+               PNP             NPN             NPN             NPN             
+       LEVEL    1               1               1               1            
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          BF  500               1.002000E+03    1.000000E+03  206.900000E+03 
+          NF    1               1               1               1            
+          BR    1               1               1               1            
+          NR    1               1               1               1            
+         ISS    0               0               0               0            
+          RE    0               0               0               0            
+          RC    0               0               0               0            
+         CJE    0               0               0               0            
+         VJE     .75             .75             .75             .75         
+         CJC    0               0               1.000000E-15    1.000000E-15 
+         VJC     .75             .75             .75             .75         
+         MJC     .33             .33             .33             .33         
+        XCJC    1               1               1               1            
+         CJS    0               0               0               0            
+         VJS     .75             .75             .75             .75         
+          TF                                                    7.855000E-12 
+          TR                                  124.200000E-09   83.830000E-09 
+          KF    0               0               0               0            
+          AF    1               1               1               1            
+          CN    2.2             2.42            2.42            2.42         
+           D     .52             .87             .87             .87         
+
+
+               X_U2.QPASSMOD   
+               NPN             
+       LEVEL    1            
+          IS   30.000000E-15 
+          BF   50            
+          NF    1.701        
+         VAF    1.5          
+          BR    1            
+          NR    1            
+         ISS    0            
+          RE    0            
+          RC    0            
+         CJE    0            
+         VJE     .75         
+         CJC    0            
+         VJC     .75         
+         MJC     .33         
+        XCJC    1            
+         CJS    0            
+         VJS     .75         
+          KF    0            
+          AF    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 05/01/20 16:52:11 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-test1"  [ C:\USERS\TAYLORRC\DOCUMENTS\testingCircuit-PSpiceFiles\SCHEMATIC1\test1.sim ] 
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U2.JADJMOD    
+               NJF             
+         VTO   -1            
+        BETA   50.000000E-06 
+
+
+**** 05/01/20 16:52:11 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-test1"  [ C:\USERS\TAYLORRC\DOCUMENTS\testingCircuit-PSpiceFiles\SCHEMATIC1\test1.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_M1.MM         
+               NMOS            
+       LEVEL    1            
+           L  100.000000E-06 
+           W  100.000000E-06 
+         VTO    3.56214      
+          KP   39.3974       
+       GAMMA    0            
+         PHI     .6          
+      LAMBDA    0            
+          IS    0            
+          JS    0            
+          PB     .8          
+        PBSW     .8          
+          CJ    0            
+        CJSW    0            
+        CGSO   12.525500E-06 
+        CGDO  228.260000E-09 
+        CGBO    0            
+         TOX    0            
+          XJ    0            
+       UCRIT   10.000000E+03 
+      DIOMOD    1            
+         VFB    0            
+        LETA    0            
+        WETA    0            
+          U0    0            
+        TEMP    0            
+         VDD    5            
+       XPART    0            
+
+
+**** 05/01/20 16:52:11 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-test1"  [ C:\USERS\TAYLORRC\DOCUMENTS\testingCircuit-PSpiceFiles\SCHEMATIC1\test1.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(CHARGE)   18.1290 (N14717)   24.0000 (N14760)   18.1290 (N14776)   16.8810     
+
+(N14967)     .0842 (N15097)   14.4580 (X_M1.4)    0.0000 (X_M1.5)   18.0450     
+
+(X_M1.6)   18.0450 (X_M1.7)     .0842 (X_M1.8)   18.1290 (X_M1.9)   18.1290     
+
+(X_U1.7)   15.5690 (X_U1.8)     .2754 (X_U1.9)     .7451 (X_U2.4)   18.1310     
+
+(X_U2.5)   19.1500 (X_U2.6)   19.1510 (X_U2.7)   19.1510 (X_U2.8)   18.2770     
+
+(X_U2.9)   18.2770 (X_M1.10)   18.0450                   (X_M1.11)   18.0450    
+
+(X_U1.10)     .7451                   (X_U1.11)     .7451                       
+
+(X_U1.21)   14.9080                   (X_U1.22)   18.5790                       
+
+(X_U2.10)   18.2770                   (X_U2.11) 1440.3000                       
+
+(X_U2.12)   25.5050                   (X_U2.13)   22.9240                       
+
+(X_U2.15)   19.1500                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -9.968E-03
+    X_U1.vi1     1.996E-07
+    X_U1.vi2    -1.796E-11
+    X_U1.v1      9.980E-05
+    X_M1.VFI2    1.805E-11
+    X_M1.VFI1    0.000E+00
+    X_U2.VREF   -1.472E-11
+
+    TOTAL POWER DISSIPATION   2.39E-01  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 05/01/20 16:52:11 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-test1"  [ C:\USERS\TAYLORRC\DOCUMENTS\testingCircuit-PSpiceFiles\SCHEMATIC1\test1.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  License check-out time            =        2.66
+  Total job time (using Solver 1)   =         .45
+

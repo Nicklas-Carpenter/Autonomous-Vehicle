@@ -1,0 +1,4 @@
+ lib=C:\Cadence\SPB_16.6\tools\pspice\library\irf.lib, offset=695521, size=1743
+ lib=C:\Cadence\SPB_16.6\tools\pspice\library\opamp.lib, offset=114813, size=896
+ lib=C:\Cadence\SPB_16.6\tools\pspice\library\opamp.lib, offset=62713, size=1061
+ lib=C:\Cadence\RHIT_Libraries\RHIT_Libraries\Class.lib, offset=47706, size=109
