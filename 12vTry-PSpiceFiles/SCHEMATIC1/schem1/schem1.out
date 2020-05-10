@@ -1,0 +1,321 @@
+
+**** 05/07/20 15:49:17 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-schem1"  [ c:\users\taylorrc\documents\12vtry-pspicefiles\schematic1\schem1.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "schem1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/Cadence/SPB_16.6/tools/pspice/library/diode.lib" 
+.LIB "C:/Cadence/SPB_16.6/tools/pspice/library/irf.lib" 
+.LIB "C:/Cadence/RHIT_Libraries/RHIT_Libraries/Class.lib" 
+.LIB "C:/Cadence/SPB_16.6/tools/pspice/library/opamp.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 180 0 0.01 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source 12VTRY
+V_V1         N14465 0  DC 12
+X_U1         N14465 N14485 N14718 LM317
+C_C1         N32549 0 20 IC=0
+C_C2         N14465 0 1u 
+R_R1         N14718 N14485 1 
+X_U2         N14485 N15691 N14465 0 N15754 0 LM311
+R_R2         N15691 N14465 1k 
+R_R3         0 N15691 3k 
+R_R5         N15754 N14465 330 
+R_R7         N17421 N14465 1k 
+D_D2         N17421 0 MEH_LED 
+X_M2         N32549 N15754 N14485 IRF4905
+D_D3         N339890 0 MEH_LED 
+R_R8         N339890 N34055 500 
+X_U3         N15754 N34055 N14465 0 N34055 LM741
+** Floating/unmodeled pin fixups **
+R__UC0001   0  0   {1/GMIN}
+
+**** RESUMING schem1.cir ****
+.END
+
+**** 05/07/20 15:49:17 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-schem1"  [ c:\users\taylorrc\documents\12vtry-pspicefiles\schematic1\schem1.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               MEH_LED         X_U1.DMOD       X_U2.dx         X_M2.MD         
+          IS    1.100000E-12   30.000000E-15  800.000000E-18   12.901400E-09 
+           N    1.9             1.701                           1.46717      
+         ISR   30.000000E-09                                                 
+          NR    3.8                                                          
+         IKF     .03                                                         
+          BV                                                   55            
+         IBV                                                  250.000000E-06 
+          RS     .66                                            2.977950E-03 
+         CJO                                                    3.569680E-09 
+          VJ     .75                                            1.17553      
+           M     .34                                             .500933     
+          EG                                                    1.2          
+         XTI                                                    4            
+
+
+               X_M2.MD1        X_M2.MD2        X_M2.MD3        X_U3.x_lm741.dx 
+          IS    0             100.000000E-12  100.000000E-12  800.000000E-18 
+           N   50                .4              .4                          
+          RS                    3.000000E-06                                 
+         CJO    4.837720E-09                                                 
+          VJ     .625334                                                     
+           M     .543532                                                     
+          FC   10.000000E-09                                                 
+
+
+**** 05/07/20 15:49:17 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-schem1"  [ c:\users\taylorrc\documents\12vtry-pspicefiles\schematic1\schem1.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.QPASSMOD   X_U2.qin        X_U2.qmi        X_U2.qmo        
+               NPN             PNP             NPN             NPN             
+       LEVEL    1               1               1               1            
+          IS   30.000000E-15  800.000000E-18  800.000000E-18  800.000000E-18 
+          BF   50             500               1.002000E+03    1.000000E+03 
+          NF    1.701           1               1               1            
+         VAF    1.5                                                          
+          BR    1               1               1               1            
+          NR    1               1               1               1            
+         ISS    0               0               0               0            
+          RE    0               0               0               0            
+          RC    0               0               0               0            
+         CJE    0               0               0               0            
+         VJE     .75             .75             .75             .75         
+         CJC    0               0               0               1.000000E-15 
+         VJC     .75             .75             .75             .75         
+         MJC     .33             .33             .33             .33         
+        XCJC    1               1               1               1            
+         CJS    0               0               0               0            
+         VJS     .75             .75             .75             .75         
+          TR                                                  124.200000E-09 
+          KF    0               0               0               0            
+          AF    1               1               1               1            
+          CN    2.42            2.2             2.42            2.42         
+           D     .87             .52             .87             .87         
+
+
+               X_U2.qoc        X_U3.x_lm741.qx 
+               NPN             NPN             
+       LEVEL    1               1            
+          IS  800.000000E-18  800.000000E-18 
+          BF  206.900000E+03   62.5          
+          NF    1               1            
+          BR    1               1            
+          NR    1               1            
+         ISS    0               0            
+          RE    0               0            
+          RC    0               0            
+         CJE    0               0            
+         VJE     .75             .75         
+         CJC    1.000000E-15    0            
+         VJC     .75             .75         
+         MJC     .33             .33         
+        XCJC    1               1            
+         CJS    0               0            
+         VJS     .75             .75         
+          TF    7.855000E-12                 
+          TR   83.830000E-09                 
+          KF    0               0            
+          AF    1               1            
+          CN    2.42            2.42         
+           D     .87             .87         
+
+
+**** 05/07/20 15:49:17 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-schem1"  [ c:\users\taylorrc\documents\12vtry-pspicefiles\schematic1\schem1.sim ] 
+
+
+ ****     Junction FET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.JADJMOD    
+               NJF             
+         VTO   -1            
+        BETA   50.000000E-06 
+
+
+**** 05/07/20 15:49:17 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-schem1"  [ c:\users\taylorrc\documents\12vtry-pspicefiles\schematic1\schem1.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_M2.MM         
+               PMOS            
+       LEVEL    1            
+           L  100.000000E-06 
+           W  100.000000E-06 
+         VTO   -3.53713      
+          KP   23.3701       
+       GAMMA    0            
+         PHI     .6          
+      LAMBDA    5.493830E-03 
+          IS    0            
+          JS    0            
+          PB     .8          
+        PBSW     .8          
+          CJ    0            
+        CJSW    0            
+        CGSO   28.443900E-06 
+        CGDO   10.000000E-12 
+        CGBO    0            
+         TOX    0            
+          XJ    0            
+       UCRIT   10.000000E+03 
+      DIOMOD    1            
+         VFB    0            
+        LETA    0            
+        WETA    0            
+          U0    0            
+        TEMP    0            
+         VDD    5            
+       XPART    0            
+
+
+**** 05/07/20 15:49:17 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-schem1"  [ c:\users\taylorrc\documents\12vtry-pspicefiles\schematic1\schem1.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N14465)   12.0000 (N14485)    4.0253 (N14718)    5.2721 (N15691)    9.0000     
+
+(N15754)     .1524 (N17421)    1.1337 (N32549)     .0025 (N34055)    1.9954     
+
+(X_M2.4)    0.0000 (X_M2.5)    -.1498 (X_M2.6)    -.1498 (X_M2.7)     .1524     
+
+(X_M2.8)    4.0127 (X_M2.9)     .0026 (X_U1.4)    5.2753 (X_U1.5)    6.5944     
+
+(X_U1.6)    7.4628 (X_U1.7)    7.4696 (X_U1.8)    5.5888 (X_U1.9)    5.5888     
+
+(X_U2.7)    5.1361 (X_U2.8)     .2533 (X_U2.9)     .8132 (N339890)    1.0257    
+
+(X_M2.10)    -.1498                   (X_M2.11)    -.1498                       
+
+(X_U1.10)    5.5888                   (X_U1.11)    7.8875                       
+
+(X_U1.12)   10.2280                   (X_U1.13)   10.6200                       
+
+(X_U1.15)    6.5944                   (X_U2.10)     .8132                       
+
+(X_U2.11)     .8132                   (X_U2.21)    4.4753                       
+
+(X_U2.22)    9.4500                   (X_U3.x_lm741.6)    1.0691                
+
+(X_U3.x_lm741.7)    2.2847            (X_U3.x_lm741.8)    2.2847                
+
+(X_U3.x_lm741.9)    0.0000            (X_U3.x_lm741.10)    1.3675               
+
+(X_U3.x_lm741.11)   11.9220           (X_U3.x_lm741.12)   12.0000               
+
+(X_U3.x_lm741.13)    1.3947           (X_U3.x_lm741.14)    1.3675               
+
+(X_U3.x_lm741.53)    9.4000           (X_U3.x_lm741.54)    2.6000               
+
+(X_U3.x_lm741.90)    1.9283           (X_U3.x_lm741.91)   25.0000               
+
+(X_U3.x_lm741.92)  -25.0000           (X_U3.x_lm741.99)    6.0000           
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -1.299E+00
+    X_U1.VREF   -3.160E-11
+    X_U2.vi1     1.996E-07
+    X_U2.vi2    -9.206E-12
+    X_U2.v1      9.980E-05
+    X_M2.VFI2   -1.498E-13
+    X_M2.VFI1    0.000E+00
+    X_U3.x_lm741.vb   1.069E-05
+    X_U3.x_lm741.vc   7.405E-12
+    X_U3.x_lm741.ve  -1.134E-05
+    X_U3.x_lm741.vlim   1.928E-03
+    X_U3.x_lm741.vlp  -2.307E-11
+    X_U3.x_lm741.vln  -2.693E-11
+
+    TOTAL POWER DISSIPATION   1.56E+01  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 05/07/20 15:49:17 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-schem1"  [ c:\users\taylorrc\documents\12vtry-pspicefiles\schematic1\schem1.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        2.56
+

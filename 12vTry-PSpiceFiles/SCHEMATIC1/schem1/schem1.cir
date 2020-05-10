@@ -1,0 +1,23 @@
+** Profile: "SCHEMATIC1-schem1"  [ c:\users\taylorrc\documents\12vtry-pspicefiles\schematic1\schem1.sim ] 
+
+** Creating circuit file "schem1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/Cadence/SPB_16.6/tools/pspice/library/diode.lib" 
+.LIB "C:/Cadence/SPB_16.6/tools/pspice/library/irf.lib" 
+.LIB "C:/Cadence/RHIT_Libraries/RHIT_Libraries/Class.lib" 
+.LIB "C:/Cadence/SPB_16.6/tools/pspice/library/opamp.lib" 
+* From [PSPICE NETLIST] section of C:\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 180 0 0.01 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+.END
