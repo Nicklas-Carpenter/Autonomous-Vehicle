@@ -1,0 +1,18 @@
+Schematic and PCB Check Report
+------------------------------
+
+Report Written:     Sunday, May 10, 2020
+Project Path:       C:\Users\carpennp\Documents\Classes\ECE362\power_supply_pcb\power_supply_pcb.prj
+Design Path:        C:\Users\carpennp\Documents\Classes\ECE362\power_supply_pcb\power_supply_pcb.pcb
+Design Title:       
+Created:            5/10/2020 6:15:27 PM
+Last Saved:         5/10/2020 7:25:21 PM
+Editing Time:       83 min
+Units:              thou (precision 0)
+
+
+Checking integrity of Schematic and Pcb designs in project "power_supply_pcb"
+=============================================================================
+
+
+End Of Report.
