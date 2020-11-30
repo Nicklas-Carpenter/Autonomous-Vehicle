@@ -1,18 +1,41 @@
 Forward Design Changes Report
 -----------------------------
 
-Report Written:     Sunday, May 10, 2020
+Report Written:     Friday, May 22, 2020
 Project Path:       C:\Users\carpennp\Documents\Classes\ECE362\power_supply_pcb\power_supply_pcb.prj
 Design Path:        C:\Users\carpennp\Documents\Classes\ECE362\power_supply_pcb\power_supply_pcb.pcb
 Design Title:       
 Created:            5/10/2020 6:15:27 PM
-Last Saved:         5/10/2020 11:04:06 PM
-Editing Time:       293 min
+<<<<<<< HEAD
+Last Saved:         5/22/2020 12:08:48 AM
+Editing Time:       2449 min
 Units:              thou (precision 0)
 
-Disconnected pin "LED_green.1" from net "N0041".
+Disconnected pin "U2.2" from net "N0041".
 
-Connected pin "LED_green.1" to net "N0024".
+Connected pin "U2.2" to net "N0049".
+=======
+Last Saved:         5/10/2020 7:25:21 PM
+Editing Time:       83 min
+Units:              thou (precision 0)
+
+Disconnected pin "R510.1" from net "N0014".
+
+Deleted net "N0014".
+
+Added net "N0079".
+
+Added component reference "U4" of component "LM741CN", package "DIP8_300".
+
+Connected pin "R510.1" to net "N0079".
+Connected pin "U4.2" to net "N0079".
+Connected pin "U4.3" to net "N0042".
+Connected pin "U4.4" to net "N0024".
+Connected pin "U4.7" to net "N0002".
+Connected pin "U4.1" to net "N0024".
+Connected pin "U4.5" to net "N0024".
+Connected pin "U4.6" to net "N0079".
+>>>>>>> parent of 6e0d4f9... Finished initial PCB design
 
 
 End Of Report.

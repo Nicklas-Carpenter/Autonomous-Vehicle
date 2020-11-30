@@ -1,8 +1,0 @@
-* source DISCHARGINGCIRCUIT
-C_C1         N17969 0 12 IC=12
-R_R5         0 N17969  100k TC=0,0 
-X_U1         N17969 N19242 N19260 LM317
-R_R7         N19242 N19260  1k TC=0,0 
-R_R8         0 N19242  4.7k TC=0,0 
-C_C2         0 N19260 1n' 
-I_I1         N19260 0 DC 1
